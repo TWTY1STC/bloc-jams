@@ -1,7 +1,9 @@
 var pointsArray = document.getElementsByClassName('point');
 
-var animatePoints = function(points){
-    var revealPoint = function(points){
+var animatePoints = pointsArray.forEach();
+/*var animatePoints = function(points){
+    forEach(points);
+/*    var revealPoint = function(points){
         for (var point in points){
             points[point].style.opacity = 1;
             points[point].style.transform = "scaleX(1) translateY(0)";
@@ -12,7 +14,7 @@ var animatePoints = function(points){
     };
     revealPoint(points);
     
-};
+};*/
 
 window.onload = function(){
     if (window.innerHeight > 950){
