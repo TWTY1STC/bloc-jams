@@ -29,6 +29,20 @@ var albumMarconi = {
          { title: 'Wrong phone number', duration: '2:15'}
     ]
 };
+//Third Album
+var albumLib = {
+    title: 'Library Network', 
+    artist: 'The People', 
+    label: 'DC', 
+    year: "1909", 
+    albumArtUrl: 'assets/images/album_covers/21.png',
+    songs: [
+        {title: 'MLK Branch', duration: '4:29'},
+        {title: 'Georgetown', duration: '2:38'},
+        {title: 'Tokoma', duration: '9:23'},
+        {title: "A Room of One's Own", duration: '6:41'}
+    ]
+};
 
 var createSongRow = function(songNumber, songName, songLength) {
     var template = 
@@ -62,4 +76,10 @@ var setCurrentAlbum = function(album) {
 
 window.onload  = function() {
     setCurrentAlbum(albumPicasso);
+    var album = setCurrentAlbum();
+    
+    album.addEventListener('click', albumScan, false);
+    function albumScan(event){
+        event.target.toggle;
+    }
 };
