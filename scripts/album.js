@@ -133,6 +133,8 @@ window.onload  = function() {
             var songItemNumber = songItem.getAttribute('data-song-number');
             if (songItemNumber !== currentlyPlayingSong){
                 songItem.innerHTML = songItemNumber;
+            }else if(songItem === currentlyPlayingSong){
+                songItem.innerHTML = pauseButtonTemplate;
             }
         });
         songRows[i].addEventListener('click', function(event){
